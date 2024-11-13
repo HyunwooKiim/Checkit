@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.tsx
+import React, { useState, useEffect } from "react";
+import LoadingScreen from "./components/LoadingScreen";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // 예시로 2초 후에 로딩이 끝난다고 가정합니다.
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {isLoading ? (
+        <LoadingScreen />
+      ) : (
+        <div>
+          <h1>메인 콘텐츠</h1>
+          <p>여기에 메인 페이지의 내용이 표시됩니다.</p>
+        </div>
+      )}
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
