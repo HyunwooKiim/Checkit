@@ -1,12 +1,10 @@
-// src/App.tsx
 import React, { useState, useEffect } from "react";
-import LoadingScreen from "./components/LoadingScreen";
+import LoadingScreen from "./shared/components/LoadingScreen";
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // 예시로 2초 후에 로딩이 끝난다고 가정합니다.
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 2000);

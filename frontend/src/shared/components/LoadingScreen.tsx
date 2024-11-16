@@ -8,7 +8,7 @@ interface LoadingScreenProps {
 const LoadingScreen: React.FC<LoadingScreenProps> = ({ message }) => {
   return (
     <div className="loading-container">
-      <img src="/Checkit.svg" alt="Logo" className="logo" />
+      <img src="/src/assets/logo.svg" alt="Logo" className="logo" />
     </div>
   );
 };
