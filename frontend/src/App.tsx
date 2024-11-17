@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import LoadingScreen from "./pages/LoadingScreen";
 import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
+import SignUpPage from "./pages/SignUpPage";
 import "./App.css"
 import Layout from "./components/layout/Layout";
 
@@ -36,6 +37,7 @@ const App: React.FC = () => {
               element={isLoggedIn ? <HomePage /> : <Navigate to="/login" />}
             />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/signup" element={<SignUpPage />} />
           </Routes>
         </Layout>
       </Router>

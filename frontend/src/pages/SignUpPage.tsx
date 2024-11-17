@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import style from "./SignUpPage.module.css";
 
-const Login: React.FC = () => {
+const SignUp: React.FC = () => {
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
@@ -29,8 +29,6 @@ const Login: React.FC = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <br />
-        <a href="#" className="forgot-password">비밀번호를 잊어버리셨나요?</a>
-        <br />
         <button type="submit">Sign Up</button>
       </form>
       <p className="signup-text">
@@ -40,4 +38,4 @@ const Login: React.FC = () => {
   );
 };
 
-export default Login;
+export default SignUp;
