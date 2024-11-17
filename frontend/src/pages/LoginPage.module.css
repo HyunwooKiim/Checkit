@@ -1,15 +1,8 @@
-/* styles/Login.css */
+/* src/pages/LoginPage.module.css */
 :root {
     --orange-color: #ff9800;
     --gray-color: #6e6e6e;
     --text-color: #333;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #fff;
-    margin: 0;
-    padding: 0;
   }
   
   .login-container {
@@ -22,17 +15,13 @@
   }
   
   .logo {
-    font-size: 2.5rem;
-    color: var(--orange-color);
+    width: 150px;
+    height: auto;
     margin-bottom: 10px;
   }
   
-  .highlight {
-    font-weight: bold;
-  }
-  
   h2 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
     color: var(--text-color);
   }
@@ -60,9 +49,13 @@
   .forgot-password {
     color: var(--orange-color);
     font-size: 0.9rem;
-    text-align: right;
-    margin-bottom: 20px;
+    text-align: center;
+    margin: 20px 0;
     text-decoration: none;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
   }
   
   button {
@@ -82,6 +75,7 @@
   .signup-text {
     font-size: 0.9rem;
     color: var(--text-color);
+    text-align: center;
   }
   
   .signup-text a {

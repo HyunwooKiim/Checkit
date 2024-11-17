@@ -1,18 +1,6 @@
-/* styles/App.css */
 :root {
   --mobile-width: 393px;
   --mobile-height: 852px;
-  --background-color: #000; /* 데스크톱 여백 배경색 */
-}
-
-body {
-  margin: 0;
-  background-color: var(--background-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
 }
 
 .app-container {

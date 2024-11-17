@@ -1,10 +1,10 @@
 import React from "react";
-import "../../App.css";
+import styles from "./Layout.module.css";
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <div className="app-container">
-      <div className="mobile-wrapper">{children}</div>
+    <div className={styles["app-container"]}>
+      <div className={styles["mobile-wrapper"]}>{children}</div>
     </div>
   );
 };

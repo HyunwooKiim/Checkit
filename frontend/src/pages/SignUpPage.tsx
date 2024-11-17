@@ -1,38 +1,48 @@
 import React, { useState } from "react";
-import style from "./SignUpPage.module.css";
+import styles from "./SignUpPage.module.css"; // CSS 모듈로 가져오기
 
 const SignUp: React.FC = () => {
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  const [confirmPassword, setConfirmPassword] = useState<string>("");
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleSignUp = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Logging in with:", { username, password });
+    if (password !== confirmPassword) {
+      console.log("Passwords do not match");
+      return;
+    }
+    console.log("Signing up with:", { username, password });
     // 여기에 API 요청 코드를 추가할 수 있습니다.
   };
 
   return (
-    <div className={style["login-container"]}>
-      <img src="/colorLogo.svg" alt="logo" />
-      <h2>Log in</h2>
-      <form onSubmit={handleLogin} className={style["login-form"]}>
+    <div className={styles["signup-container"]}>
+      <img src="/colorLogo.svg" alt="logo" className={styles["logo"]} />
+      <h2>Sign Up</h2>
+      <form onSubmit={handleSignUp} className={styles["signup-form"]}>
         <input
           type="text"
-          placeholder="username123"
+          placeholder="username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
         <input
           type="password"
-          placeholder="Thisismypassword123$$"
+          placeholder="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <br />
+        <input
+          type="password"
+          placeholder="Confirm Password"
+          value={confirmPassword}
+          onChange={(e) => setConfirmPassword(e.target.value)}
+        />
         <button type="submit">Sign Up</button>
       </form>
-      <p className="signup-text">
-        계정이 없다면? <a href="/login">로그인 하기</a>
+      <p className={styles["login-text"]}>
+        이미 계정이 있으신가요? <a href="/login">로그인 하기</a>
       </p>
     </div>
   );

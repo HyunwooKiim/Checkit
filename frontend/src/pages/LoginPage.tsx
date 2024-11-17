@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import style from "./LoginPage.module.css";
+import styles from "./LoginPage.module.css"; // CSS 모듈로 가져오기
 
 const Login: React.FC = () => {
   const [username, setUsername] = useState<string>("");
@@ -12,28 +12,26 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className={style["login-container"]}>
-      <img src="/colorLogo.svg" alt="logo" />
+    <div className={styles["login-container"]}>
+      <img src="/colorLogo.svg" alt="logo" className={styles["logo"]} />
       <h2>Log in</h2>
-      <form onSubmit={handleLogin} className={style["login-form"]}>
+      <form onSubmit={handleLogin} className={styles["login-form"]}>
         <input
           type="text"
-          placeholder="username123"
+          placeholder="username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
         <input
           type="password"
-          placeholder="Thisismypassword123$$"
+          placeholder="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <br />
-        <a href="#" className="forgot-password">비밀번호를 잊어버리셨나요?</a>
-        <br />
+        <a href="#" className={styles["forgot-password"]}>비밀번호를 잊어버리셨나요?</a>
         <button type="submit">Login</button>
       </form>
-      <p className="signup-text">
+      <p className={styles["signup-text"]}>
         계정이 없다면? <a href="/signup">회원가입 하기</a>
       </p>
     </div>
