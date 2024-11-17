@@ -1,0 +1,95 @@
+/* styles/Login.css */
+:root {
+    --orange-color: #ff9800;
+    --gray-color: #6e6e6e;
+    --text-color: #333;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  .logo {
+    font-size: 2.5rem;
+    color: var(--orange-color);
+    margin-bottom: 10px;
+  }
+  
+  .highlight {
+    font-weight: bold;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+  }
+  
+  .login-form {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 2px solid var(--gray-color);
+    outline: none;
+  }
+  
+  input:focus {
+    border-bottom-color: var(--orange-color);
+  }
+  
+  .forgot-password {
+    color: var(--orange-color);
+    font-size: 0.9rem;
+    text-align: right;
+    margin-bottom: 20px;
+    text-decoration: none;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: var(--gray-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  .signup-text {
+    font-size: 0.9rem;
+    color: var(--text-color);
+  }
+  
+  .signup-text a {
+    color: var(--orange-color);
+    text-decoration: none;
+  }
+  
+  .signup-text a:hover {
+    text-decoration: underline;
+  }
+  
