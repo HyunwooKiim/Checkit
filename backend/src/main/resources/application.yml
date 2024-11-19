@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: backend
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/checkitDB
+    username: checkit
+    password: checkit
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+
+  security:
+    user:
+      name: admin
+      password: adminpassword
+
+jwt:
+  secret: JCQxMjE5VGhpczEyMTlpczEyMTl0aGUxMjE5c2VydmljZTEyMTl3aGF0MTIxOUkxMjE5cmVhbGx5MTIxOXdhbnRlZDEyMTlJdCdzMTIxOUNoZWNraXQhMTIxOSQk
