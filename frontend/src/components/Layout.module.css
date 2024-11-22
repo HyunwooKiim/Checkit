@@ -1,0 +1,31 @@
+:root {
+  --mobile-width: 393px;
+  --mobile-height: 852px;
+}
+
+.app-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-wrapper {
+  width: 100%;
+  max-width: var(--mobile-width);
+  max-height: var(--mobile-height);
+  height: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* 데스크톱 뷰일 때 중앙에 고정 */
+@media screen and (min-width: 768px) {
+  .mobile-wrapper {
+    width: var(--mobile-width);
+    height: var(--mobile-height);
+  }
+}

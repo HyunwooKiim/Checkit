@@ -1,0 +1,76 @@
+/* styles/SignUpPage.module.css */
+:root {
+  --orange-color: #ff9800;
+  --gray-color: #6e6e6e;
+  --text-color: #333;
+}
+
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.signup-form {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 2px solid var(--gray-color);
+  outline: none;
+}
+
+input:focus {
+  border-bottom-color: var(--orange-color);
+}
+
+button {
+  padding: 10px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: var(--gray-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.login-text {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.login-text a {
+  color: var(--orange-color);
+  text-decoration: none;
+}
+
+.login-text a:hover {
+  text-decoration: underline;
+}
