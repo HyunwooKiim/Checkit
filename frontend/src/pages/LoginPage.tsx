@@ -12,6 +12,7 @@ const Login: React.FC = () => {
   };
 
   return (
+    <>
     <div className={styles["login-container"]}>
       <img src="/colorLogo.svg" alt="logo" className={styles["logo"]} />
       <h2>Log in</h2>
@@ -28,13 +29,14 @@ const Login: React.FC = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <a href="#" className={styles["forgot-password"]}>비밀번호를 잊어버리셨나요?</a>
+        <span><a href="#" className={styles["forgot-password"]}>비밀번호를 잊어버리셨나요?</a></span>
         <button type="submit">Login</button>
       </form>
       <p className={styles["signup-text"]}>
         계정이 없다면? <a href="/signup">회원가입 하기</a>
       </p>
     </div>
+    </>
   );
 };
 

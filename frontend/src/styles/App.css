@@ -1,16 +1,12 @@
 /* src/styles/App.css */
-:root {
-  --mobile-width: 393px;
-  --mobile-height: 852px;
-  --background-color: #000; /* 데스크톱 여백 배경색 */
+.wrap {
+  max-width: 430px;
+  width: 100%;
+  background-color: #fff;
 }
 
-body {
-  margin: 0;
-  background-color: var(--background-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
+@media (min-width: 431px) {
+  .wrap {
+    border-radius: 50px;
+  }
 }

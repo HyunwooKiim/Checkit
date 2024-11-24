@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import LoadingScreen from "./components/LoadingScreen";
 import LoginPage from "./pages/LoginPage";
+import Login from "../test/Login"
 import HomePage from "./pages/HomePage";
 import SignUpPage from "./pages/SignUpPage";
 import Layout from "./components/Layout";
 import "./styles/App.css";
 
-const App: React.FC = () => {
+function App() {
   const [isLoading, setIsLoading] = useState(true); // 로딩 상태
   const [isLoggedIn, setIsLoggedIn] = useState(false); // 로그인 상태
 
@@ -31,23 +32,21 @@ const App: React.FC = () => {
 
     checkAuth();
   }, []);
-
-  // 로딩 중에는 로딩 화면만 렌더링
   if (isLoading) {
-    return <LoadingScreen message="Loading, please wait..." />;
+    return <LoadingScreen />;
   }
 
   return (
-    <Router>
-      <Layout>
-        <Routes>
-          {/* 로그인 상태에 따라 홈 또는 로그인 페이지로 이동 */}
-          <Route path="/" element={isLoggedIn ? <HomePage /> : <Navigate to="/login" />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/signup" element={<SignUpPage />} />
-        </Routes>
-      </Layout>
+    <div className="wrap">
+    <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+      <Routes>
+        <Route path="/" element={isLoggedIn ? <HomePage /> : <Navigate to="/login" />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignUpPage />} />
+      </Routes>
     </Router>
+    </div>
+
   );
 };
 
