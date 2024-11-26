@@ -15,7 +15,6 @@ java {
 
 repositories {
 	mavenCentral()  // Maven Central 저장소 추가
-	jcenter()       // JCenter 추가 (대체용)
 }
 
 
@@ -31,8 +30,5 @@ dependencies {
 	implementation 'io.jsonwebtoken:jjwt-impl:0.11.5'
 	implementation 'io.jsonwebtoken:jjwt-jackson:0.11.5'
 	implementation 'mysql:mysql-connector-java:8.0.33'
-}
-
-tasks.named('test') {
-	useJUnitPlatform()
+	implementation 'com.fasterxml.jackson.core:jackson-databind'
 }

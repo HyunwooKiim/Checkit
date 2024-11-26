@@ -3,9 +3,9 @@ spring:
     name: backend
 
   datasource:
-    url: jdbc:mysql://localhost:3306/checkitDB
-    username: checkit
-    password: checkit
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
@@ -22,4 +22,4 @@ spring:
       password: adminpassword
 
 jwt:
-  secret: JCQxMjE5VGhpczEyMTlpczEyMTl0aGUxMjE5c2VydmljZTEyMTl3aGF0MTIxOUkxMjE5cmVhbGx5MTIxOXdhbnRlZDEyMTlJdCdzMTIxOUNoZWNraXQhMTIxOSQk
+  secret: ${SECRET_KEY}
