@@ -1,50 +1,29 @@
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+/src
+├── /assets         # 정적 파일 (이미지, 폰트, CSS 등)
+│   ├── /images
+│   ├── /fonts
+│   └── /styles     # 전역 스타일 (e.g., tailwind, global.css)
+│       ├── variables.scss
+│       └── global.css
+├── /components     # 재사용 가능한 컴포넌트
+│   ├── /common     # 공통 컴포넌트 (Button, Modal 등)
+│   ├── /layout     # 레이아웃 관련 컴포넌트 (Header, Footer 등)
+│   └── /features   # 기능별 컴포넌트
+├── /hooks          # 사용자 정의 React Hooks
+│   └── useAuth.ts
+├── /pages          # 페이지 단위 컴포넌트
+│   ├── Home.tsx
+│   ├── About.tsx
+│   └── NotFound.tsx
+├── /routes         # 라우팅 관련 코드
+│   └── index.tsx
+├── /services       # API 호출 및 서비스 로직
+│   ├── /api        # API 요청 함수
+│   └── /types      # API 응답/요청 타입 정의
+├── /store          # 상태 관리 (e.g., Redux, Zustand)
+│   └── index.ts
+├── /utils          # 공통 유틸 함수 및 헬퍼
+│   └── formatDate.ts
+├── App.tsx         # 메인 앱 컴포넌트
+├── main.tsx        # 진입 파일 (ReactDOM.render or createRoot)
+└── vite-env.d.ts   # Vite 관련 타입 정의

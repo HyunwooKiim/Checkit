@@ -1,0 +1,12 @@
+/* src/styles/App.css */
+.wrap {
+  max-width: 430px;
+  width: 100%;
+  background-color: #fff;
+}
+
+@media (min-width: 431px) {
+  .wrap {
+    border-radius: 50px;
+  }
+}

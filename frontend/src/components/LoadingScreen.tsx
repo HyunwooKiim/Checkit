@@ -1,14 +1,11 @@
-// src/components/LoadingScreen.tsx
-import React from "react";
-import "../LoadingScreen.css";
-interface LoadingScreenProps {
-  message?: string;
-}
+import styles from "./LoadingScreen.module.css"; // CSS 모듈로 가져오기
 
-const LoadingScreen: React.FC<LoadingScreenProps> = ({ message }) => {
+function LoadingScreen() {
   return (
-    <div className="loading-container">
-      <img src="/Checkit.svg" alt="Logo" className="logo" />
+    <div className={styles["loading-container"]}>
+      <div className={styles["mobile-wrapper"]}>
+        <img src="/logo.svg" alt="logo" className={styles["logo"]} />
+      </div>
     </div>
   );
 };

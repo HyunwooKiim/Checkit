@@ -1,0 +1,28 @@
+.app-container {
+  width: 100%;
+  max-width: 479px; /* 모바일에서 최대 너비 설정 */
+  height: 100dvh; /* 전체 화면 높이로 설정 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* 모바일에서 화면이 꽉 차도록 추가 스타일 */
+@media (max-width: 479px) {
+  .app-container {
+    height: 100dvh; /* 모바일에서 전체 화면 높이 유지 */
+    padding: 0; /* 패딩 제거 */
+    margin: 0; /* 마진 제거 */
+  }
+}
+
+/* 데스크탑에서의 스타일 */
+@media (min-width: 480px) {
+  .app-container {
+    height: auto; /* 데스크탑에서는 자동 높이 */
+  }
+}
